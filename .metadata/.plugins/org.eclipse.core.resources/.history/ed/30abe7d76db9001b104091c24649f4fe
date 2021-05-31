@@ -1,0 +1,49 @@
+package com.spring.reply.dao;
+
+import java.util.List;
+
+import org.apache.ibatis.session.SqlSession;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import com.spring.reply.vo.ReplyVO;
+
+@Repository
+public class ReplyDaoImpl implements ReplyDao {
+	
+	@Autowired
+	private SqlSession session;
+
+	@Override
+	public List<ReplyVO> replyList(String rnum) {
+		// TODO Auto-generated method stub
+		List<ReplyVO> rList = null;
+		rList = session.selectList("replyList", rnum);
+		return rList;
+	} // end of replyList
+	
+	@Override
+	public ReplyVO replySeq(ReplyVO rvo) {
+		// TODO Auto-generated method stub
+		return null;
+	} // end of replySeq
+
+	@Override
+	public int replyInsert(ReplyVO rvo) {
+		// TODO Auto-generated method stub
+		return 0;
+	} // end of replyInsert
+
+	@Override
+	public int replyUpdate(ReplyVO rvo) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int replyDelete(ReplyVO rvo) {
+		// TODO Auto-generated method stub
+		return 0;
+	} // end of replyDelete
+
+} // end of ReplyDaoImpl

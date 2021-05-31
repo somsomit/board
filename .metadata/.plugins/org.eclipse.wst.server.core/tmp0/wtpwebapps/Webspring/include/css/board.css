@@ -1,0 +1,43 @@
+@CHARSET "UTF-8";
+/* 공통 부분 */
+*{margin:0px; paddding 0px;}
+body, td, input select{font-family:'돋움'; font-size:12px;}
+a{text-decoration:none; color:#000000;}
+caption{display:none;}
+img{border:0px;}
+
+/* 게시판 리스트 화면 */
+#boardContainer {width:800px;}
+#boardTit{font-size: large; board-left: 10px solid #000066;
+		  border-bottom: 1px solid #000066;
+		  padding: 10px; width: 760px;}
+		  
+/* 검색 */
+#boardSearch table{width:780px; text-align:right; margin:10px; border-collapse:collapse;}
+#boardSearch #btb1{width:390px; text-align:left;}
+#boardSearch #btb2{width:390px; text-align:right;}
+
+/* 리스트 */
+#boardList{margin:10px;}
+#boardList table{width:780px; padding:0px; border:1px solid #000066;
+				 border-botttom:0px; border-collapse:collapse;}
+#boardList tr{padding:0px;}
+#boardList th{border-bottom:1px solid #000066; border-right:1px solid #000066;
+			  padding:5px; background-color:#e7e7e7;}
+#boardList td{padding:5px; border-bottom:1px solid #000066;}
+#boardList .borcle{border-right:0px;}
+
+/* 버튼 */
+#boardContainer #boardBut{width:780px; margin:10px; text-align:right;}
+
+/* 페이징 출력 div */
+#boardContainer #boardPage{width:780px; margin:10px;}
+
+/* 페이징 버튼 */
+.paginate{width:100%; height:20px; text-align:center; vertical-align:top; font-size:14px;}
+.paginate span .textAn{vertical-align:top;}
+.paginate a.on{color:#FF3300;}
+
+/*  */
+/*  */
+/*  */

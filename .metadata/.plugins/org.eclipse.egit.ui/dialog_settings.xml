@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="true" key="CommitDialog.showUntracked"/>
+	<list key="CommitDialog.authorValues">
+		<item value="somsomit &lt;neulring@gmail.com&gt;"/>
+		<item value="somsom &lt;neulring@gmail.com&gt;"/>
+	</list>
+	<list key="CommitDialog.committerValues">
+		<item value="somsomit &lt;neulring@gmail.com&gt;"/>
+		<item value="somsom &lt;neulring@gmail.com&gt;"/>
+	</list>
+	<list key="RepositorySelectionPage.UsedUris">
+		<item value="ssh://somsomit@github.com/somsomit/miniProject.git"/>
+		<item value="https://github.com/somsomit/miniProject.git"/>
+		<item value="https://github.com/somsomit/miniProject"/>
+	</list>
+	<section name="org.eclipse.egit.ui.internal.dialogs.ResetTargetSelectionDialog.dialogBounds">
+		<item value="538" key="DIALOG_WIDTH"/>
+		<item value="-18" key="DIALOG_Y_ORIGIN"/>
+		<item value="750" key="DIALOG_HEIGHT"/>
+		<item value="369" key="DIALOG_X_ORIGIN"/>
+		<item value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕" key="DIALOG_FONT_NAME"/>
+	</section>
+	<section name="GitCommitMessageComponent">
+	</section>
+	<section name="org.eclipse.egit.ui.COMMIT_DIALOG_SECTION">
+		<item value="642" key="DIALOG_WIDTH"/>
+		<item value="55" key="DIALOG_Y_ORIGIN"/>
+		<item value="347" key="DIALOG_X_ORIGIN"/>
+		<item value="641" key="DIALOG_HEIGHT"/>
+		<item value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕" key="DIALOG_FONT_NAME"/>
+	</section>
+	<section name="org.eclipse.egit.ui.internal.push.PushResultDialog.dialogBounds">
+		<item value="666" key="DIALOG_WIDTH"/>
+		<item value="177" key="DIALOG_Y_ORIGIN"/>
+		<item value="335" key="DIALOG_X_ORIGIN"/>
+		<item value="458" key="DIALOG_HEIGHT"/>
+		<item value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕" key="DIALOG_FONT_NAME"/>
+	</section>
+</section>

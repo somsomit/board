@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+						"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.spring.reply.dao.ReplyDao">
+	<select id="replyList" parameterType="reply" resultType="reply">
+		SELECT R_NUM, R_NAME, R_CONTENT, TO_CHAR(R_INSERTDATE, 'YYYY-MM-DD HH24:MI:SS') AS R_INSERTDATE
+		FROM SPRING_REPLY
+		<where>
+			R_DELETEYN = 'Y'
+		</where>
+		ORDER BY R_NUM DESC
+	</select>
+	<insert id="replyInsert" parameterType="reply">
+		INSERT INTO SPRING_REPLY
+		(R_NUM, B_NUM, R_NAME, R_CONTENT, R_PWD, R_INSERTDATE, R_UPDATEDATE, R_DELETEYN)
+		VALUES(#{r_num}, #{b_num}, #{r_name}, #{r_content}, #{r_pwd}, SYSDATE, SYSDATE, 'Y')
+	</insert>
+</mapper>

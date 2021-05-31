@@ -1,0 +1,57 @@
+package com.spring.reply.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.spring.reply.dao.ReplyDao;
+import com.spring.reply.vo.ReplyVO;
+
+public class ReplyServiceImpl implements ReplyService {
+	
+	@Autowired
+	private ReplyDao replyDao;
+
+	@Override
+	public List<ReplyVO> replyList(String rnum) {
+		// TODO Auto-generated method stub
+		System.out.println("[log] ReplyServiceImpl.replyList 시작");
+		List<ReplyVO> replyList = null;
+		replyList = replyDao.replyList(rnum);
+		System.out.println("[log] ReplyServiceImpl.replyList 끝");
+		return replyList;
+	} // end of replyList
+
+	@Override
+	public ReplyVO replySeq(ReplyVO rvo) {
+		// TODO Auto-generated method stub
+		System.out.println("[log] ReplyServiceImpl.replySeq 시작");
+		System.out.println("[log] ReplyServiceImpl.replySeq 끝");
+		return null;
+	} // end of replySeq
+
+	@Override
+	public int replyInsert(ReplyVO rvo) {
+		// TODO Auto-generated method stub
+		System.out.println("[log] ReplyServiceImpl.replyInsert 시작");
+		System.out.println("[log] ReplyServiceImpl.replyInsert 끝");
+		return 0;
+	} // end of replyInsert
+
+	@Override
+	public int replyUpdate(ReplyVO rvo) {
+		// TODO Auto-generated method stub
+		System.out.println("[log] ReplyServiceImpl.replyUpdate 시작");
+		System.out.println("[log] ReplyServiceImpl.replyUpdate 끝");
+		return 0;
+	} // end of replyUpdate
+
+	@Override
+	public int replyDelete(ReplyVO rvo) {
+		// TODO Auto-generated method stub
+		System.out.println("[log] ReplyServiceImpl.replyDelete 시작");
+		System.out.println("[log] ReplyServiceImpl.replyDelete 끝");
+		return 0;
+	} // end of replyDelete
+
+}

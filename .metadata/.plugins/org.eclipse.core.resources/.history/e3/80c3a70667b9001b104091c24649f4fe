@@ -1,0 +1,5 @@
+package com.spring.reply.vo;
+
+public class ReplyVO {
+
+}

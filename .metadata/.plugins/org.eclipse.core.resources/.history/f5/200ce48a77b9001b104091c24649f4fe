@@ -1,0 +1,31 @@
+package com.spring.reply.controller;
+
+
+import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import java.util.List;
+import com.spring.reply.service.ReplyService;
+import com.spring.reply.vo.ReplyVO;
+
+@Controller
+@RequestMapping(value="/replies")
+public class ReplyController {
+	
+	Logger logger = Logger.getLogger(ReplyController.class);
+	
+	@Autowired
+	private ReplyService replyService;
+	
+	@RequestMapping(value="/all/{b_num}.som", method=RequestMethod.GET)
+	public ResponseEntity<List<ReplyVO>> replyList(@PathVariable("b_num") String b_num){
+		System.out.println("[log] ReplyController.replyList 시작");
+		System.out.println("[log] ReplyController.replyList 끝");
+		return null;
+	}
+	
+}

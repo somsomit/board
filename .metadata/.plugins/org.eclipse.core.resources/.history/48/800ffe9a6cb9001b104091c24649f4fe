@@ -1,0 +1,5 @@
+package com.spring.reply.service;
+
+public interface ReplyService {
+
+}

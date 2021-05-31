@@ -1,0 +1,67 @@
+package com.spring.reply.dao;
+
+import java.util.List;
+
+import org.apache.ibatis.session.SqlSession;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import com.spring.reply.vo.ReplyVO;
+
+@Repository
+public class ReplyDaoImpl implements ReplyDao {
+	
+	@Autowired
+	private SqlSession session;
+
+	@Override
+	public List<ReplyVO> replyList(String rnum) {
+		// TODO Auto-generated method stub
+		System.out.println("[log] ReplyDaoImpl.replyList 시작");
+		List<ReplyVO> rList = null;
+		rList = session.selectList("replyList", rnum);
+		System.out.println("[log] ReplyDaoImpl.replyList 끝");
+		return rList;
+	} // end of replyList
+	
+	@Override
+	public ReplyVO replySeq(ReplyVO _rvo) {
+		// TODO Auto-generated method stub
+		System.out.println("[log] ReplyDaoImpl.replySeq 시작");
+		ReplyVO rvo = null;
+		rvo = session.selectOne("replySeq");
+		System.out.println("[log] ReplyDaoImpl.replySeq 끝");
+		return rvo;
+	} // end of replySeq
+
+	@Override
+	public int replyInsert(ReplyVO rvo) {
+		// TODO Auto-generated method stub
+		System.out.println("[log] ReplyDaoImpl.replyInsert 시작");
+		int result = 0;
+		result = session.insert("replyInsert");
+		System.out.println("[log] ReplyDaoImpl.replyInsert 끝");
+		return result;
+	} // end of replyInsert
+
+	@Override
+	public int replyUpdate(ReplyVO rvo) {
+		// TODO Auto-generated method stub
+		System.out.println("[log] ReplyDaoImpl.replyUpdate 시작");
+		int result = 0;
+		result = session.update("replyUpdate");
+		System.out.println("[log] ReplyDaoImpl.replyUpdate 끝");
+		return result;
+	}
+
+	@Override
+	public int replyDelete(ReplyVO rvo) {
+		// TODO Auto-generated method stub
+		System.out.println("[log] ReplyDaoImpl.replyDelete 시작");
+		int result = 0;
+		result = session.update("replyDelete");
+		System.out.println("[log] ReplyDaoImpl.replyDelete 끝");
+		return result;
+	} // end of replyDelete
+
+} // end of ReplyDaoImpl

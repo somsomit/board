@@ -1,0 +1,58 @@
+package com.spring.reply.service;
+
+import java.util.List;
+
+import com.spring.board.service.BoardService;
+import com.spring.board.vo.BoardVO;
+
+public class ReplyServiceImpl implements BoardService {
+
+	@Override
+	public List<BoardVO> boardList(BoardVO bvo) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public BoardVO boardDetail(BoardVO bvo) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int boardInsert(BoardVO bvo) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int boardUpdate(BoardVO bvo) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int boardDelete(BoardVO bvo) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int pwdConfirm(BoardVO bvo) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int boardListCnt(BoardVO bvo) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public BoardVO boardSeq(BoardVO _bvo) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

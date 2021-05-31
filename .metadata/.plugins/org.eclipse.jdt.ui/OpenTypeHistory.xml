@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+<typeInfo handle="=Webspring/C:\/Users\/chiri\/Documents\/web\/Webspring\/WebContent\/WEB-INF\/lib\/spring-webmvc-3.2.4.RELEASE.jar&lt;org.springframework.web.servlet.view(UrlBasedViewResolver.class[UrlBasedViewResolver" modifiers="33" timestamp="1620060819525"/>
+<typeInfo handle="=Webspring/C:\/Users\/chiri\/Documents\/web\/Webspring\/WebContent\/WEB-INF\/lib\/spring-webmvc-3.2.4.RELEASE.jar&lt;org.springframework.web.servlet.view(JstlView.class[JstlView" modifiers="33" timestamp="1620060819525"/>
+<typeInfo handle="=Webspring/C:\/Users\/chiri\/Documents\/web\/Webspring\/WebContent\/WEB-INF\/lib\/spring-web-3.2.4.RELEASE.jar&lt;org.springframework.web.multipart.commons(CommonsMultipartResolver.class[CommonsMultipartResolver" modifiers="33" timestamp="1620060819517"/>
+<typeInfo handle="=Webspring/C:\/Users\/chiri\/Documents\/web\/Webspring\/WebContent\/WEB-INF\/lib\/spring-context-3.2.4.RELEASE.jar&lt;org.springframework.jndi(JndiObjectFactoryBean.class[JndiObjectFactoryBean" modifiers="33" timestamp="1620060819273"/>
+<typeInfo handle="=Webspring/C:\/Users\/chiri\/Documents\/web\/Webspring\/WebContent\/WEB-INF\/lib\/mybatis-spring-1.2.2.jar&lt;org.mybatis.spring(SqlSessionFactoryBean.class[SqlSessionFactoryBean" modifiers="33" timestamp="1620060819210"/>
+<typeInfo handle="=Webspring/C:\/Users\/chiri\/Documents\/web\/Webspring\/WebContent\/WEB-INF\/lib\/mybatis-spring-1.2.2.jar&lt;org.mybatis.spring(SqlSessionTemplate.class[SqlSessionTemplate" modifiers="33" timestamp="1620060819210"/>
+<typeInfo handle="=Webspring/C:\/Users\/chiri\/Documents\/web\/Webspring\/WebContent\/WEB-INF\/lib\/spring-jdbc-3.2.4.RELEASE.jar&lt;org.springframework.jdbc.datasource(DataSourceTransactionManager.class[DataSourceTransactionManager" modifiers="33" timestamp="1620060819360"/>
+<typeInfo handle="=Webspring/C:\/Users\/chiri\/Documents\/web\/Webspring\/WebContent\/WEB-INF\/lib\/mybatis-spring-1.2.2.jar&lt;org.mybatis.spring.mapper(MapperScannerConfigurer.class[MapperScannerConfigurer" modifiers="33" timestamp="1620060819210"/>
+<typeInfo handle="=Webspring/src&lt;com.spring.board.dao{BoardDao.java[BoardDao" modifiers="513" timestamp="1621515771028"/>
+<typeInfo handle="=Webspring/src&lt;com.spring.reply.dao{ReplyDao.java[ReplyDao" modifiers="513" timestamp="1621604041529"/>
+<typeInfo handle="=Webspring/src&lt;com.spring.board.service{BoardService.java[BoardService" modifiers="513" timestamp="1621515784549"/>
+<typeInfo handle="=Webspring/src&lt;com.spring.reply.service{ReplyService.java[ReplyService" modifiers="513" timestamp="1621604060822"/>
+</typeInfoHistroy>

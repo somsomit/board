@@ -1,0 +1,39 @@
+package com.spring.reply.service;
+
+import java.util.List;
+
+import com.spring.reply.vo.ReplyVO;
+
+public class ReplyServiceImpl implements ReplyService {
+
+	@Override
+	public List<ReplyVO> replyList(String rnum) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ReplyVO replySeq(ReplyVO rvo) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int replyInsert(ReplyVO rvo) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int replyUpdate(ReplyVO rvo) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int replyDelete(ReplyVO rvo) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

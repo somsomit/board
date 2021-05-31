@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+						"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.spring.board.dao.BoardDao">
+	<sql id="boardCommon">
+		SELECT B_NUM, B_NAME, B_TITLE, B_INSERTDATE
+		FROM SPRING_BOARD
+		<trim prefix="WHERE" prefixOverrides="AND">
+			B_DELETEYN = 'Y'
+			<if test="search=='b_title'">
+				<![CDATA[ AND b_title LIKE '%'|| #{keyword} ||'%']]>
+			</if>
+			<if test="search=='b_content'">
+				<![CDATA[ AND b_content LIKE '%'|| #{keyword} ||'%']]>
+			</if>
+			<if test="search=='b_name'">
+				<![CDATA[ AND b_name LIKE '%'|| #{keyword} ||'%']]>
+			</if>
+		</trim>
+ 	</sql>
+	
+	<!-- 게시글 전체 조회 -->
+	<select id="boardList" parameterType="board" resultType="board">
+		SELECT B_NUM, B_NAME, B_TITLE, TO_CHAR(B_INSERTDATE, 'YYYY-MM-DD HH24:MI:SS') AS B_INSERTDATE
+		FROM 
+			(	SELECT list.*, ROWNUM AS RNUM
+				FROM (
+						<include refid="boardCommon"></include>
+						<choose>
+							<when test="order_by=='B_NUM'">
+								ORDER BY B_NUM
+							</when>
+							<when test="order_by=='B_INSERTDATE'">
+								ORDER BY B_INSERTDATE
+							</when>
+						</choose>
+						<choose>
+							<when test="order_sc=='ASC'">
+								ASC
+							</when>
+							<when test="order_sc=='DESC'">
+								DESC
+							</when>
+						</choose>
+						) LIST
+			) 
+			<where>
+			<if test="start_row != null and start_row != ''">
+				<if test="end_row != null and end_row != ''">
+					RNUM BETWEEN #{start_row} AND #{end_row}
+				</if>
+			</if>
+		</where>
+	</select>
+	
+	<select id="boardListCnt" parameterType="board" resultType="int">
+		SELECT NVL(COUNT(1), 0) FROM
+			(SELECT list.*, ROWNUM AS RNUM
+			FROM (
+					<include refid="boardCommon"></include>
+					ORDER BY B_NUM DESC
+					) list
+				)
+	</select>
+	 
+	<!-- 게시글 상세 조회 -->
+	<select id="boardDetail" parameterType="board" resultType="board">
+		SELECT B_NUM, B_NAME, B_TITLE, B_CONTENT, B_FILE, TO_CHAR(B_INSERTDATE, 'YYYY-MM-DD HH24:MI:SS') AS B_INSERTDATE
+		FROM SPRING_BOARD
+		<where>
+		B_NUM = #{b_num} AND B_DELETEYN = 'Y'
+		</where>
+	</select>
+	
+	<!-- 게시글 작성을 위한 채번 -->
+	<select id="sequenceB" parameterType="board" resultType="board">
+		SELECT MAX(NVL(SUBSTR(B_NUM, -3),0)) +1 AS B_NUM
+		FROM SPRING_BOARD
+		<where>
+			B_DELETEYN = 'Y'
+		</where>
+	</select>
+	
+	<!-- 비밀번호 확인 -->
+	<select id="pwdConfirm" parameterType="board" resultType="int">
+		SELECT NVL((
+			SELECT 1 
+			FROM SPRING_BOARD
+			WHERE
+				B_NUM = #{b_num} AND 
+				B_PWD = #{b_pwd} AND
+				B_DELETEYN = 'Y' ), 0) AS RESULT
+		FROM DUAL
+	</select>
+	
+	<!-- 게시글 작성 -->
+	<insert id="boardInsert" parameterType="board">
+		INSERT INTO SPRING_BOARD
+		(B_NUM, B_NAME, B_TITLE, B_CONTENT, B_FILE, B_PWD, B_INSERTDATE, B_UPDATEDATE, B_DELETEYN)
+		VALUES(#{b_num}, #{b_name}, #{b_title}, #{b_content}, #{b_file}, #{b_pwd}, SYSDATE, SYSDATE, 'Y')
+	</insert>
+	
+	<!-- 게시글 업데이트 -->
+	<update id="boardUpdate" parameterType="board">
+		UPDATE SPRING_BOARD
+		SET B_NAME = #{b_name}, B_TITLE = #{b_title}, B_CONTENT = #{b_content}, B_UPDATEDATE = SYSDATE
+		<if test="b_file != ''">
+			, B_FILE = #{b_file}
+		</if>
+		<where>
+			B_NUM = #{b_num} AND B_DELETEYN = 'Y'
+		</where>
+	</update>
+	
+	<!-- 게시글 삭제 -->
+	<update id="boardDelete" parameterType="board">
+		UPDATE SPRING_BOARD
+		SET B_DELETEYN = 'N'
+		<where>
+			B_NUM = #{b_num} AND B_DELETEYN = 'Y'
+		</where>
+	</update>
+</mapper>

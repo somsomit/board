@@ -1,0 +1,4 @@
+commit_dialog_history_messages=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<messages>\r\n<message>\uD398\uC774\uC9D5 \uC774\uC804, \uB2E4\uC74C \uC218\uC815&\#x0A;\uB367\uAE00 \uC870\uD68C \uAE30\uB2A5 \uCD94\uAC00</message>\r\n<message>\uD398\uC774\uC9D5 \uC774\uC804, \uB2E4\uC74C \uC218\uC815&\#x0A;\uB367\uAE00 \uC870\uD68C\uAE30\uB2A5 \uCD94\uAC00</message>\r\n<message>\uC815\uB82C, \uAC80\uC0C9 \uAE30\uB2A5 \uCD94\uAC00&\#x0A;\uD398\uC774\uC9D5(\uC774\uC804, \uB2E4\uC74C) \uC218\uC815 \uD544\uC694</message>\r\n<message>\uCCA8\uBD80\uD30C\uC77C \uCD9C\uB825 \uAC00\uB2A5&\#x0A;\uAC8C\uC2DC\uAE00 \uC791\uC131, \uC0AD\uC81C \uAC00\uB2A5</message>\r\n<message>eclipse commint&\#x0A;\uC870\uD68C\uAE30\uB2A5, \uC785\uB825\uAE30\uB2A5 \uCD94\uAC00(\uC0AC\uC9C4 \uC5C5\uB85C\uB4DC \uAD00\uB828 \uC218\uC815 \uD544\uC694)</message>\r\n</messages>
+eclipse.preferences.version=1
+remote_connection_timeout=300
+show_initial_config_dialog=false
